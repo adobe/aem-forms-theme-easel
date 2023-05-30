@@ -13,6 +13,23 @@
 
   &__tab {
     @include tab;
+    &--active {
+      color: $vary-dark-primary;
+      border-color: $vary-dark-primary;
+    }
+
+    &--active::after {
+      color: $vary-dark-primary;
+    }
+
+    &--active:hover {
+      border-bottom-color: $vary-dark-primary;
+    }
+
+    &:hover {
+      color: $vary-dark-primary;
+      border-bottom-color: $vary-dark-primary;
+    }
   }
 
   &__tabpanel {

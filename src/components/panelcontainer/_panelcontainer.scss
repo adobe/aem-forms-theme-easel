@@ -5,7 +5,7 @@
   flex-direction: column;
 
   &[data-cmp-is="adaptiveFormPanel"] {
-    margin: 0 0 $space-l 0;
+    // margin: 0 0 $space-l 0;
   }
 
   &__label {
@@ -18,4 +18,8 @@
 
 .panelcontainer:last-child>[data-cmp-is="adaptiveFormPanel"] {
   margin-bottom: 0;
+}
+p{
+  margin: 4px 0;
+  padding: 0;
 }

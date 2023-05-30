@@ -22,36 +22,67 @@
   }
 }
 
-.submit {
-  position: sticky;
-  border-radius: 0;
-  background: linear-gradient(to top, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 0) 100%);
-  width: 100%;
-  padding: $space-m 0;
-  bottom: 0;
-  left: 0;
-  z-index: 12;
-}
-.reset{
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  z-index: 12;
-  background: #fff;
-}
+// .submit {
+//   position: sticky;
+//   border-radius: 0;
+//   background: linear-gradient(to top, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 0) 100%);
+//   width: 100%;
+//   padding: $space-m 0;
+//   bottom: 0;
+//   left: 0;
+//   z-index: 12;
+// }
+// .reset{
+//   position: sticky;
+//   bottom: 0;
+//   left: 0;
+//   z-index: 12;
+//   background: #fff;
+// }
 .reset .cmp-adaptiveform-button{
   flex-direction: row-reverse;
 }
-
-// .btn_next .cmp-adaptiveform-button__widget{
-//   background:url(./resources/images/Chevron-Right.svg) center center / 1rem 1rem no-repeat;
-//   &::before {
-//     content: '';
-//   }
-// }
-// .btn_prv .cmp-adaptiveform-button__widget{
-//   background:url(./resources/images/Chevron-Left.svg) center center / 1rem 1rem no-repeat;
-//   &::before {
-//     content: '';
-//   }
-// }
+.button_add .cmp-adaptiveform-button__widget{
+  background:url(./resources/images/add-button.svg) center center / 1rem 1rem no-repeat;
+  width: fit-content;
+  min-width: unset;
+  border-radius: 50%;
+  border: 1px solid #969696;
+  padding: 24px;
+  &::before {
+    content: '';
+  }
+}
+.button_delete .cmp-adaptiveform-button__widget{
+  background:url(./resources/images/remove-button.svg) center center / 1rem 1rem no-repeat;
+  width: fit-content;
+  min-width: unset;
+  border-radius: 50%;
+  border: 1px solid #969696;
+  padding: 24px;
+  &::before {
+    content: '';
+  }
+}
+.button_next .cmp-adaptiveform-button__widget{
+  background:url(./resources/images/Chevron-Next.svg) center center / 1rem 1rem no-repeat;
+  width: fit-content;
+  min-width: unset;
+  border-radius: 50%;
+  border: 1px solid #969696;
+  padding: 24px;
+  &::before {
+    content: '';
+  }
+}
+.button_previous .cmp-adaptiveform-button__widget{
+  background:url(./resources/images/Chevron-Left.svg) center center / 1rem 1rem no-repeat;
+  width: fit-content;
+  min-width: unset;
+  border-radius: 50%;
+  border: 1px solid #969696;
+  padding: 24px;
+  &::before {
+    content: '';
+  }
+}
