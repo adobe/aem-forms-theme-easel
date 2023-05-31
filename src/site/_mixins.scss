@@ -320,12 +320,12 @@
   }
 
   &--active:hover {
-    border-bottom-color: $primary;
+    border-bottom-color: $vary-dark-primary;
   }
 
   &:hover {
-    color: $primary;
-    border-bottom-color: $primary;
+    color: $vary-dark-primary;
+    border-bottom-color: $vary-dark-primary;
   }
 
 }

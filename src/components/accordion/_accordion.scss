@@ -25,11 +25,11 @@
     }
 
     &--expanded {
-      color: $primary;
-      border-color: $primary;
+      color: $vary-dark-primary;
+      border-color: $vary-dark-primary;
 
       &:hover {
-        color: $primary;
+        color: $vary-dark-primary;
       }
     }
   }
@@ -65,5 +65,29 @@
 
   &__panel {
     @include tab-panel;
+  }
+
+  &__header{
+    display: flex;
+  }
+  &__button{
+    flex: 1;
+  }
+  &__repeatable-buttons{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  &__add-button{
+    background: url(./resources/images/add-button-repeatable.svg) 50% 40% / 1.2rem 1.2rem no-repeat;
+    width: 1.5rem;
+    border: 0;
+    height: 1.5rem;
+  }
+  &__remove-button{
+    background: url(./resources/images/remove-button-repeatable.svg) 50% 40% / 1.2rem 1.2rem no-repeat;
+    width: 1.5rem;
+    border: 0;
+    height: 1.5rem;
   }
 }
