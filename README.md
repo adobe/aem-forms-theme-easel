@@ -1,6 +1,6 @@
-# af2-canvas-theme
+# af2-easel-theme
 
-This is the standard Canvas theme for Adobe Experience Manager (AEM) Forms.
+This is the standard Easel theme for Adobe Experience Manager (AEM) Forms.
 
 This theme can be modified to customize the visual appearance of Adaptive Form.
 
