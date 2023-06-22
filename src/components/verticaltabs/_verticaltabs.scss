@@ -1,6 +1,6 @@
 .cmp-verticaltabs{
     font-size: $font-m;
-    margin: $field-margin;
+    margin: $space-s;
     position: relative;
   
   &__tabs-container{
@@ -23,33 +23,17 @@
   &__tab{
     padding: 12px 4px 12px 12px;
     margin-top: 8px;
+    color: $light-gray;
   }
   &__tab:hover{
     border-left: 2px solid $light-gray;
   }
   &__tab--active {
     border-left: 2px solid;
+    color: $primary;
+    &:hover{
+      border-left: 2px solid $primary;
+    }
   }
-  &__longdescription {
-    color: $light-gray;
-    background-color: $very-light-gray;
-    font-size: $font-s;
-    padding: 0.125rem 0.5rem;
-    margin-top: $space-xs;
-  }
-  &__shortdescription {
-    font-size: $font-s;
-    margin-top: $space-xs;
-  }
-  &__questionmark{
-    position: absolute;
-    display:inline-block;
-    top:8px;
-    right:8px;
-    width:1rem;
-    height:1rem;
-    border-radius: 9px;
-    background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
-    cursor : pointer;
-  }
+  @include description
 }
