@@ -8,12 +8,9 @@
     margin-top: 16px;
   }
   &__tabpanel{
-    flex: 1;
-    padding: 16px 56px;
+    @include panel-label
   }
-  &__tabpanel--active{
-    
-  }
+  
   &__tablist{
     width: 150px;
     list-style: none;

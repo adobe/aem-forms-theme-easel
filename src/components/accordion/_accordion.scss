@@ -64,27 +64,5 @@
     @include tab-panel;
   }
 
-  &__repeatable-buttons{
-    display: flex;
-    align-items: center;
-    background: transparent;
-    gap: 5px;
-    .cmp-accordion__add-button{
-      background: url('./resources/images/add-button.svg') 50% 50% no-repeat;
-      @include repeatability-icon-default;
-      &:hover {
-        background: url('./resources/images/add-button-white.svg') 50% 50% no-repeat;
-        background-color: $blue;
-        box-shadow: 0px 3px 12px #00000033;
-      }
-    }
-    .cmp-accordion__remove-button{
-      background: url('./resources/images/remove-button.svg') 50% 50% no-repeat;
-      @include repeatability-icon-default;
-      &:hover {
-        background-color: $error;
-        box-shadow: 0px 3px 12px #00000033;
-      }
-    }
-  }
+  @include repeatability-buttons
 }
