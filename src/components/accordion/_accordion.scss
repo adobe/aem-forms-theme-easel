@@ -8,6 +8,7 @@
 
   &__header {
     padding: 0 $space-s;
+    display: flex;
   }
 
   &__label {
@@ -16,6 +17,7 @@
 
   &__button {
     @include tab;
+    flex: 1;
     border: none;
     border-bottom: $border-light;
     border-width: 2px;
@@ -61,4 +63,6 @@
   &__panel {
     @include tab-panel;
   }
+
+  @include repeatability-buttons
 }
