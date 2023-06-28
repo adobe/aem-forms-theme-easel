@@ -15,6 +15,7 @@
     "devDependencies": {
         "@adobe/aem-site-theme-builder": "5.3.0",
         "@parcel/transformer-sass": "^2.0.1",
+        "aem-clientlib-generator": "^1.8.0",
         "autoprefixer": "^10.3.7",
         "browser-sync": "^2.26.13",
         "install": "^0.13.0",
@@ -44,8 +45,5 @@
                 ]
             }
         }
-    },
-    "dependencies": {
-        "aem-clientlib-generator": "^1.8.0"
     }
 }
