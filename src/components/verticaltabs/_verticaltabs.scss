@@ -8,7 +8,8 @@
     margin-top: 16px;
   }
   &__tabpanel{
-    @include panel-label
+    @include panel-label;
+    flex:1;
   }
   
   &__tablist{
