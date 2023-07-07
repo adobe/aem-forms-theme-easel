@@ -1,7 +1,7 @@
 {
-    "name": "aem-forms-canvas-theme-updated",
+    "name": "aem-forms-easel-theme",
     "version": "0.0.1",
-    "description": "Standard AEM Forms Canvas theme",
+    "description": "Standard AEM Forms Easel theme",
     "license": "MIT License, Copyright 2022 Adobe Systems Incorporated",
     "scripts": {
         "build": "rimraf dist && parcel build src/theme.ts",
