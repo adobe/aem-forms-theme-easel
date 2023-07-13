@@ -18,6 +18,8 @@
     column-gap: $space-xs;
     align-items: center;
     pointer-events: all;
+    width: inherit;
+    align-self: auto;
   }
 
   &__filelist {
