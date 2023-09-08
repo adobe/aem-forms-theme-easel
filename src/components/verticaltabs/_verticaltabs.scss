@@ -25,12 +25,24 @@
   }
   &__tab:hover{
     border-left: 2px solid $light-gray;
+    body[dir="rtl"] & {
+      border-left: 0;
+      border-right: 2px solid $light-gray;
+    }
   }
   &__tab--active {
     border-left: 2px solid;
+    body[dir="rtl"] & {
+      border-left: 0;
+      border-right: 2px solid;
+    }
     color: $primary;
     &:hover{
       border-left: 2px solid $primary;
+      body[dir="rtl"] & {
+        border-left: 0;
+        border-right: 2px solid $primary;
+      }
     }
   }
   @include description
