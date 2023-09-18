@@ -1,6 +1,10 @@
 .cmp-adaptiveform-wizard {
   @include container;
 
+  &__label-container {
+    margin-bottom: $space-s;
+  }
+
   &__label {
     @include panel-label;
   }

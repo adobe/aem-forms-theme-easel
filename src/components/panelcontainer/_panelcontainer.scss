@@ -8,6 +8,10 @@
     margin: 0 0 $space-l 0;
   }
 
+  &__label-container {
+    margin-bottom: $space-s;
+  }
+
   &__label {
     @include panel-label;
   }

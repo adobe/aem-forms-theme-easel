@@ -18,10 +18,6 @@ select::after {
   content: '';
   background: url(./resources/images/chevron-down.svg) center center / cover no-repeat;
   position: relative;
-
-  body[dir="rtl"] & {
-    left: 0;
-  }
 }
 
 .cmp-adaptiveform-dropdown__widget[multiple='multiple'] {

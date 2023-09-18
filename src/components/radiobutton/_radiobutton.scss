@@ -16,7 +16,7 @@
   }
 
   &__option {
-    &__label {
+    &__label,&-label {
       @include list-item;
     }
   }
