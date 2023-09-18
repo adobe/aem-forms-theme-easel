@@ -44,4 +44,19 @@
   &__nextNav {
     @include wizard-next-button;
   }
+  &__containerNav {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+  }
+
+  &__nav {
+    &--previous {
+      @include wizard-previous-button;
+      
+    }
+    &--next {
+      @include wizard-next-button;
+    }
+  }
 }
