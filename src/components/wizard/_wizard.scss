@@ -48,6 +48,9 @@
     display: flex;
     justify-content: end;
     gap: 20px;
+    position: absolute;
+    width: 100%;
+    bottom: -80px;
   }
 
   &__nav {

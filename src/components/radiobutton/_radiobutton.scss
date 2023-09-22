@@ -16,12 +16,10 @@
   }
 
   &__option {
-    &__label,&-label {
-      @include list-item;
-    }
+    @include list-item;
   }
 
-  input[type="radio"] {
+  &__option__widget {
     height: 1.2rem;
     width: 1.2rem;
     cursor: pointer;

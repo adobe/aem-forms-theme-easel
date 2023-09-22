@@ -20,14 +20,7 @@
     align-items: center;
   }
 
-  &:has(input:required) &__label::after,
-  &:has(select:required) &__label::after,
-  &:has(textarea:required) &__label::after,
-  div[data-cmp-required=true]>label::after {
-    content: ' *';
-    font-weight: bold;
-    color: $error;
-  }
+  @include required-field-style;
 
   // remove this code
   &.cmp-tabs,
@@ -36,6 +29,19 @@
     margin: $space-l 0;
   }
 
+}
+
+@mixin required-field-style {
+  &[data-cmp-required=true] &__label {
+      display: flex;
+      justify-content: flex-start;
+      column-gap: $space-xs;
+      &::after {
+        content: '*';
+        font-weight: bold;
+        color: $error;
+      }
+  }
 }
 
 @mixin label {
