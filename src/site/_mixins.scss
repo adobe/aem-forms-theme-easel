@@ -141,7 +141,7 @@
   position: absolute;
   display: flex;
   top: 0;
-  inset-inline: auto 0;
+  inset-inline-end: 0;
   padding: 0;
   width: $font-m;
   height: $font-m;
@@ -180,20 +180,20 @@
   &__questionmark {
     @include question-mark;
   }
-}
-
-// input contains the container, label, widget, description, error
-@mixin input {
-  @include container;
-
+ 
   &__label-container {
     display: flex;
     justify-content: space-between;
     &>button[class*=__questionmark] {
       position: unset;
-      right: unset;
+      inset-inline-end: unset;
     }
   }
+}
+
+// input contains the container, label, widget, description, error
+@mixin input {
+  @include container;
 
   &__label {
     @include label;
