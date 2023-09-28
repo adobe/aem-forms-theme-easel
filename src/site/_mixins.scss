@@ -20,14 +20,7 @@
     align-items: center;
   }
 
-  &:has(input:required) &__label::after,
-  &:has(select:required) &__label::after,
-  &:has(textarea:required) &__label::after,
-  div[data-cmp-required=true]>label::after {
-    content: ' *';
-    font-weight: bold;
-    color: $error;
-  }
+  @include required-field-style;
 
   // remove this code
   &.cmp-tabs,
@@ -38,8 +31,21 @@
 
 }
 
+@mixin required-field-style {
+  &[data-cmp-required=true] &__label {
+      display: flex;
+      justify-content: flex-start;
+      column-gap: $space-xs;
+      &::after {
+        content: '*';
+        font-weight: bold;
+        color: $error;
+      }
+  }
+}
+
 @mixin label {
-  padding-right: $space-m;
+  padding-inline-end: $space-m;
   box-sizing: border-box;
   opacity: 1;
   color: $dark-gray;
@@ -135,7 +141,7 @@
   position: absolute;
   display: flex;
   top: 0;
-  right: 0;
+  inset-inline-end: 0;
   padding: 0;
   width: $font-m;
   height: $font-m;
@@ -143,11 +149,6 @@
   background: url(./resources/images/question.svg) center center / cover no-repeat;
   cursor: pointer;
   border: none;
-
-  body[dir="rtl"] & {
-    left: 0;
-    right: initial;
-  }
 }
 
 @mixin error-message {
@@ -160,7 +161,7 @@
   &::before {
     content: '';
     background: url(./resources/images/error.svg) center center / cover no-repeat;
-    margin-right: $space-xs;
+    margin-inline-end: $space-xs;
     height: 16px;
     min-width: 16px;
   }
@@ -178,6 +179,15 @@
 
   &__questionmark {
     @include question-mark;
+  }
+ 
+  &__label-container {
+    display: flex;
+    justify-content: space-between;
+    &>button[class*=__questionmark] {
+      position: unset;
+      inset-inline-end: unset;
+    }
   }
 }
 
@@ -295,7 +305,7 @@
   min-height: $tap-height;
   line-height: 1.2;
   color: $gray;
-  margin-right: $space-m;
+  margin-inline-end: $space-m;
   font-size: $font-m;
   display: flex;
   align-items: center;
@@ -362,7 +372,7 @@
   &::before {
     counter-increment: section;
     content: counter(section);
-    margin-right: 0;
+    margin-inline-end: 0;
     background-color: $very-light-gray;
     padding: 6px;
     line-height: .56;
@@ -388,7 +398,7 @@
   &--active::before {
     counter-increment: section;
     content: counter(section);
-    margin-right: $space-s;
+    margin-inline-end: $space-s;
     background-color: $primary;
     padding: 6px;
     line-height: .56;
@@ -461,6 +471,7 @@
   cursor: pointer;
   margin: 0;
   padding: $space-s;
+  font-size: $font-m;
 
   &:hover {
     background-color: $background-color;

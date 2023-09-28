@@ -7,6 +7,11 @@
     display: flex;
     margin-top: 16px;
   }
+
+  &__label-container {
+    margin-bottom: $space-s;
+  }
+
   &__tabpanel{
     @include panel-label;
     flex:1;
@@ -19,18 +24,20 @@
     margin: 0;
   }
   &__tab{
-    padding: 12px 4px 12px 12px;
+    padding-inline: 12px 4px;
+    padding-block: 12px;
     margin-top: 8px;
     color: $light-gray;
+    cursor: pointer;
   }
   &__tab:hover{
-    border-left: 2px solid $light-gray;
+    border-inline-start: 2px solid $light-gray;
   }
   &__tab--active {
-    border-left: 2px solid;
+    border-inline-start: 2px solid;
     color: $primary;
     &:hover{
-      border-left: 2px solid $primary;
+      border-inline-start: 2px solid $primary;
     }
   }
   @include description

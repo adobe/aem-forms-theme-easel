@@ -14,14 +14,16 @@
   &__errormessage {
     @include error-message
   }
+
   &-item {
     @include list-item;
   }
-  &-item &__label {
+  
+  &-item &__label,&__option-label {
     @include checkbox-label;
   }
 
-  input[type='checkbox'] {
+  &__option__widget {
     height: 1rem;
     width: 1rem;
     cursor: pointer;
