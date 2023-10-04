@@ -17,6 +17,12 @@
 
   &__option {
     @include list-item;
+    &-label {
+      display: flex;
+      column-gap: $space-s;
+      align-items: center;
+      width: 100%;
+    }
   }
 
   &__option__widget {
