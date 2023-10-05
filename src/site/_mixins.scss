@@ -223,7 +223,7 @@
   display: block;
   background: $primary;
   border: none;
-  border-radius: $button-radius;
+  border-radius: 500px;
   height: $tap-height;
   padding: 0 $space-m;
   cursor: pointer;
@@ -262,7 +262,7 @@
   position: static;
   align-self: flex-start;
   background: $background-color;
-  border-radius: $button-radius;
+  border-radius: 500px;
   box-shadow: 0 6px 12px 1px rgba($color: #000000, $alpha: 0);
   vertical-align: text-bottom;
   cursor: pointer;
