@@ -60,11 +60,12 @@
   display: flex;
   align-items: center;
   gap: $space-s;
+  width: 100%;
 }
 
 @mixin panel-label {
   font-size: $font-l;
-  font-weight: 500;
+  font-weight: $font-weight-semi-bold;
   color: $dark-gray;
   opacity: 1;
   margin-top: 0;
@@ -83,6 +84,7 @@
   margin: $space-xs 0;
   outline: $focus-outline;
   outline-width: 0px;
+  box-sizing: border-box;
 
   &:hover:not([disabled]) {
     border: $border-dark;
@@ -100,11 +102,17 @@
   &:disabled {
     background-color: $disabled-color;
   }
+
+  &[readonly] {
+    border: none;
+    border-bottom: $border-light;
+    border-radius: 0;
+  } 
 }
 
 @mixin long-description {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background-color: $background-color;
   border-radius: $field-radius;
   opacity: 1;
@@ -215,15 +223,16 @@
   display: block;
   background: $primary;
   border: none;
-  border-radius: $button-radius;
+  border-radius: 500px;
   height: $tap-height;
   padding: 0 $space-m;
   cursor: pointer;
   color: white;
   font-size: $font-m;
-  font-weight: 500;
+  font-weight: $font-weight-semi-bold;
+  font-family: defaultFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-  &:hover {
+  &:hover:not([disabled]) {
     position: relative;
     box-shadow: 0 6px 12px 1px rgba($color: #000000, $alpha: .25);
     transform: translateY(-5%);
@@ -253,14 +262,14 @@
   position: static;
   align-self: flex-start;
   background: $background-color;
-  border-radius: $button-radius;
+  border-radius: 500px;
   box-shadow: 0 6px 12px 1px rgba($color: #000000, $alpha: 0);
   vertical-align: text-bottom;
   cursor: pointer;
   color: $primary;
   font-size: $font-m;
   padding: $space-s $space-m;
-  font-weight: 500;
+  font-weight: $font-weight-semi-bold;
   margin: $space-s 0;
   opacity: 1;
 
@@ -293,10 +302,11 @@
   padding: 0 $space-s;
   counter-reset: section;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   list-style: none;
   margin: 0;
   margin-bottom: 0;
+  overflow: auto;
 }
 
 @mixin tab {
@@ -309,14 +319,21 @@
   font-size: $font-m;
   display: flex;
   align-items: center;
-  font-weight: 500;
   border-radius: 0;
   border-width: 2px;
+  white-space: nowrap;
+  font-weight: $font-weight-semi-bold;
+
+  &:hover {
+    color: $dark-gray;
+    border-bottom-color: $very-light-gray;
+    border-bottom-style: solid;
+  }
 
   &--active {
     color: $primary;
     border-color: $dark-primary;
-    font-weight: 500;
+    border-bottom-style: solid;
     display: flex;
     align-items: center;
   }
@@ -329,11 +346,7 @@
 
   &--active:hover {
     border-bottom-color: $primary;
-  }
-
-  &:hover {
-    color: $dark-gray;
-    border-bottom-color: $very-light-gray;
+    border-bottom-style: solid;
   }
 
 }
@@ -347,7 +360,8 @@
   box-shadow: 0 6px 12px 1px rgba($color: #000000, $alpha: .03);
 
   @media (max-width: 480px) {
-    padding: $space-m;
+    padding-block: $space-m;
+    padding-inline: $space-s;
     width: 100%;
   }
 }
@@ -362,7 +376,6 @@
   display: flex;
   align-items: center;
   font-size: $font-m;
-  font-weight: 500;
   transition: flex-grow ease .3s;
   border-radius: 0;
   border-bottom-width: 2px;

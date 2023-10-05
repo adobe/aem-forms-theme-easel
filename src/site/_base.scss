@@ -4,13 +4,13 @@ body {
   color: $dark-gray;
   font-size: $font-m;
   background-color: white;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-
+  font-family: defaultFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
 
-
+*,*:before,*:after {
+  box-sizing: inherit;
+}
 
 .aem-Grid {
   @include generate-grid(default, $max_col);

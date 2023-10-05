@@ -6,6 +6,9 @@
   &__tabs-container{
     display: flex;
     margin-top: 16px;
+    @media(max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   &__label-container {
@@ -18,27 +21,43 @@
   }
   
   &__tablist{
-    width: 150px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  &__tab{
-    padding-inline: 12px 4px;
-    padding-block: 12px;
-    margin-top: 8px;
-    color: $light-gray;
-    cursor: pointer;
-  }
-  &__tab:hover{
-    border-inline-start: 2px solid $light-gray;
-  }
-  &__tab--active {
-    border-inline-start: 2px solid;
-    color: $primary;
-    &:hover{
-      border-inline-start: 2px solid $primary;
+    
+    
+    @media(min-width: 768px) {
+      width: 150px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-inline-end: $space-m;
+    }
+    @media(max-width: 768px) {
+      @include tab-list;
+      padding-bottom: 2 * $space-xs;
+
     }
   }
+  &__tab {
+    cursor: pointer;
+    @media(min-width: 768px) {
+      padding-inline: 12px 4px;
+      padding-block: 12px;
+      margin-top: 8px;
+      color: $light-gray;
+      &:hover {
+        border-inline-start: 2px solid $light-gray;
+      }
+      &--active {
+        border-inline-start: 2px solid;
+        color: $primary;
+        &:hover{
+          border-inline-start: 2px solid $primary;
+        }
+      }
+    }
+    @media(max-width: 768px) {
+      @include tab;
+    }
+  }
+  
   @include description
 }
