@@ -65,7 +65,7 @@
 
 @mixin panel-label {
   font-size: $font-l;
-  font-weight: 600;
+  font-weight: $font-weight-semi-bold;
   color: $dark-gray;
   opacity: 1;
   margin-top: 0;
@@ -229,7 +229,7 @@
   cursor: pointer;
   color: white;
   font-size: $font-m;
-  font-weight: 600;
+  font-weight: $font-weight-semi-bold;
   font-family: defaultFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   &:hover:not([disabled]) {
@@ -269,7 +269,7 @@
   color: $primary;
   font-size: $font-m;
   padding: $space-s $space-m;
-  font-weight: 600;
+  font-weight: $font-weight-semi-bold;
   margin: $space-s 0;
   opacity: 1;
 
@@ -322,7 +322,7 @@
   border-radius: 0;
   border-width: 2px;
   white-space: nowrap;
-  font-weight: 600;
+  font-weight: $font-weight-semi-bold;
 
   &:hover {
     color: $dark-gray;

@@ -28,7 +28,7 @@
     justify-content: space-between;
     margin-inline-end: unset;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: $font-weight-semi-bold;
 
     &:hover {
       color: $dark-gray;
