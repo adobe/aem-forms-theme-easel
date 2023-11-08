@@ -1,6 +1,6 @@
 {
     "name": "aem-forms-easel-theme",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Standard AEM Forms Easel theme",
     "license": "MIT License, Copyright 2022 Adobe Systems Incorporated",
     "scripts": {
