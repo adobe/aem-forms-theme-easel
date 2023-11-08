@@ -1,12 +1,26 @@
-# af2-easel-theme
+# AEM Forms Easel Theme
 
 This is the standard Easel theme for Adobe Experience Manager (AEM) Forms.
 
 This theme can be modified to customize the visual appearance of Adaptive Form.
 
+## Usage
+
+If you're using CSS modules in JavaScript, you can install the NPM module:
+
+```
+npm install --save @aemforms/af-easel-theme
+```
+
+Then just import the files as you would other CSS.
+
+```
+import '@aemforms/af-easel-theme/dist/theme.css';
+```
+
 ## Structure
 
-* `src/main.ts`: This is the main entry point of your JS & CSS theme.
+* `src/theme.ts`: This is the main entry point of your JS & CSS theme.
 * `src/site`: Files that are generic to the entire site.
 * `src/components`: Files that are specific to components.
 * `src/resources`: Associated files, like icons, logos, fonts.
@@ -23,6 +37,7 @@ Initialize the project with following command executed at the theme root:
 
 ```
 npm install
+npm run build
 ```
 
 ### Creating Clientlib for AEM 65
@@ -68,4 +83,4 @@ Contributions are welcomed! Read the [Contributing Guide](.github/CONTRIBUTING.m
 
 ## Licensing
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE.md) for more information.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for more information.
