@@ -364,6 +364,9 @@
     padding-inline: $space-s;
     width: 100%;
   }
+  &--hidden {
+    display: none;
+  }
 }
 
 // wizard tab
