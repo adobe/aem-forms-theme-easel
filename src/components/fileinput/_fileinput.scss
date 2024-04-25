@@ -27,6 +27,15 @@
 
   &__fileitem {
     @include list-item;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__fileendcontainer {
+    display: flex;
+    justify-content: space-between;
+    gap: $space-s;
+    align-items: center;
   }
 
   &__filename {

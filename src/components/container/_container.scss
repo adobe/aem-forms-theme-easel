@@ -3,9 +3,12 @@
     margin: 0 auto;
     padding: 0 $space-m;
     box-sizing: border-box;
-    max-width: 720px;
     width: 100%;
     padding: $space-s;
+    padding-inline: 20%;
+    @media(max-width: 768px) {
+      padding-inline: $space-s;
+    }
   }
 
   &--loading {
