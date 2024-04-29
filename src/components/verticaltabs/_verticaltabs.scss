@@ -15,6 +15,10 @@
     margin-bottom: $space-s;
   }
 
+  &__label {
+    @include panel-label;
+  }
+
   &__tabpanel{
     @include panel-label;
     flex:1;
@@ -42,7 +46,7 @@
       padding-inline: 12px 4px;
       padding-block: 12px;
       margin-top: 8px;
-      color: $light-gray;
+      color: $gray;
       &:hover {
         border-inline-start: 2px solid $light-gray;
       }
