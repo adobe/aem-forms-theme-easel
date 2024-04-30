@@ -19,7 +19,7 @@
     @include panel-label;
   }
 
-  &__button {
+  &__header &__button {
     @include tab;
     flex: 1;
     border: none;
