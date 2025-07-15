@@ -78,7 +78,7 @@
   font-size: $font-m;
   height: $field-height;
   background-color: transparent;
-  border: $border-light;
+  border: $border-dark;
   border-radius: $field-radius;
   padding: 0 $space-s;
   margin: $space-xs 0;
@@ -87,7 +87,7 @@
   box-sizing: border-box;
 
   &:hover:not([disabled]) {
-    border: $border-dark;
+    border: $border-darker;
     transition: border 0.3s ease-out;
   }
 
