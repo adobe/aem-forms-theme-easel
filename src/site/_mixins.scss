@@ -218,6 +218,14 @@
   }
 }
 
+@mixin focused-button {
+  position: relative;
+  box-shadow: 0 6px 12px 1px rgba($color: #000000, $alpha: .25);
+  transform: translateY(-5%);
+  scale: 102%;
+  transition: box-shadow 0.1s ease-out, transform 0.1s ease-out;
+}
+
 @mixin primary-button {
   width: 100%;
   display: block;
@@ -233,11 +241,11 @@
   font-family: defaultFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   &:hover:not([disabled]) {
-    position: relative;
-    box-shadow: 0 6px 12px 1px rgba($color: #000000, $alpha: .25);
-    transform: translateY(-5%);
-    scale: 102%;
-    transition: box-shadow 0.1s ease-out, transform 0.1s ease-out;
+    @include focused-button;
+  }
+
+  &:focus-visible:not([disabled]) {
+    @include focused-button;
   }
 
   &:disabled {
